@@ -50,6 +50,7 @@ jobs:
     - name: Setup problem matchers
       uses: adafruit/circuitpython-action-library-ci-problem-matchers@v1
     - name: Pre-commit hooks
+      continue-on-error: true
       run: |
         pre-commit run --all-files
     - name: Build assets
